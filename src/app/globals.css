@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gradient-to-b from-emerald-50 to-white text-gray-900 antialiased;
+}
