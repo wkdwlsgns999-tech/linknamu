@@ -10,12 +10,11 @@ export default async function Home() {
   const counts = await getClickCounts();
 
   return (
-    <main className="flex min-h-screen justify-center sm:items-center sm:px-4 sm:py-12">
-      {/* 모바일에서는 화면 전체, 넓은 화면에서는 와이어프레임처럼 둥근 카드 프레임 */}
-      <div className="flex w-full max-w-md flex-col px-4 py-12 sm:rounded-[2rem] sm:border sm:border-gray-200 sm:bg-white/70 sm:px-8 sm:shadow-lg sm:backdrop-blur">
+    <main className="flex min-h-screen justify-center px-6 sm:px-8">
+      <div className="flex w-full max-w-md flex-col pt-16 pb-10 sm:pt-24">
         <ProfileHeader name={profile.name} bio={profile.bio} image={profile.image} />
 
-        <ul className="mt-10 flex flex-col gap-6">
+        <ul className="mt-12 flex flex-col gap-4 sm:gap-5">
           {profile.links.map((link) => (
             <li key={link.id}>
               <LinkCard
@@ -29,7 +28,7 @@ export default async function Home() {
           ))}
         </ul>
 
-        <footer className="mt-auto pt-12 text-center text-xs text-gray-400">
+        <footer className="mt-auto pt-16 text-center text-xs tracking-wide text-stone-400">
           링크나무
         </footer>
       </div>

@@ -28,11 +28,11 @@ export default function LinkCard({ id, title, description, url, initialCount }: 
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
-      className="relative flex min-h-24 w-full flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white px-14 py-6 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-400 hover:shadow-md active:translate-y-0"
+      className="relative flex min-h-20 w-full flex-col items-center justify-center rounded-3xl border border-white/70 bg-white/45 px-14 py-5 text-center shadow-[0_6px_24px_-12px_rgb(140_80_40/0.25)] backdrop-blur-md transition duration-300 ease-out hover:-translate-y-px hover:bg-white/65 hover:shadow-[0_10px_28px_-12px_rgb(140_80_40/0.32)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 active:translate-y-0"
     >
-      <span className="text-lg font-semibold">{title}</span>
-      {description && <span className="mt-1 text-sm text-gray-500">{description}</span>}
-      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-normal text-gray-400">
+      <span className="text-base font-semibold">{title}</span>
+      {description && <span className="mt-1 text-sm text-stone-500">{description}</span>}
+      <span className="absolute right-5 top-1/2 -translate-y-1/2 text-xs tabular-nums text-stone-400">
         {count.toLocaleString("ko-KR")}회
       </span>
     </a>

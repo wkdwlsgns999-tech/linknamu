@@ -16,6 +16,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* Pretendard: 한글용 둥근 산세리프. dynamic subset이라 실제 쓰는 글자만 내려받음 */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
